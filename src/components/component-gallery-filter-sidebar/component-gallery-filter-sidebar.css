@@ -1,0 +1,18 @@
+.sidebar {
+  width: 200px;
+  float: left;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+select {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}

@@ -1,0 +1,466 @@
+{
+  "components": [
+    {
+      "title": "arcgis-hub-metadata-list",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-metadata-list/index.html",
+      "type": "Metadata",
+      "status": "Prototype"
+    },
+    {
+      "title": "arcgis-hub-dataset-field-list",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-dataset-field-list/index.html",
+      "type": "Metadata",
+      "status": "Prototype"
+    },
+    {
+      "title": "arcgis-hub-media-gallery",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-media-gallery/index.html",
+      "type": "Layout",
+      "status": "Development"
+    },
+    {
+      "title": "arcgis-shareable-card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/shareable-cards-playground/index.html",
+      "type": "Layout",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Content",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: State",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/state.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Groups",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/groups.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Users",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/users.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Static List",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/list.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Well-Known Types",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/well-known-types.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Lazy Display",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/lazy-display.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Collection Scope",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/collection-scope.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "ArcGIS Hub Card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-card/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Group Member Summary",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-group-member-summary/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-gallery-card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery-card/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-rich-text",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-rich-text/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-license-picker",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-license-picker/index.html",
+      "type": "Metadata",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-date-range-facet",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-date-range-facet/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-image",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-image/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "Content Hero",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-content-hero/index.html",
+      "type": "View",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-embed",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-embed/index.html",
+      "type": "Layout",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-image-upload",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-image-upload/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-discussions-channel-settings-editor",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-discussions-channel-settings-editor/index.html",
+      "type": "Discussions",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery Picker",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery-picker/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-attributes-list",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-attributes-list/index.html",
+      "type": "Metadata",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-location-picker",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-location-picker/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-multi-page-modal",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-multi-page-modal/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-discussions",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-discussions/index.html",
+      "type": "Discussions",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-map",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-map/index.html",
+      "type": "Visualization",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-stat-card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-stat-card/index.html",
+      "type": "Layout",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-boundary-picker",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-boundary-picker/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "Download Card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/hub-download-card-harness/index.html",
+      "type": "Downloads",
+      "status": "Production"
+    },
+    {
+      "title": "Download List",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-download-list/index.html",
+      "type": "Downloads",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-search-input",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-search-input/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-input-color",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-input-color/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-feeds-list",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-feeds-list/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-copyable-input",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-copyable-input/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-discussions",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-discussions/index.html",
+      "type": "Discussions",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-countdown",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-countdown/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-share-card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-share-card/index.html",
+      "type": "Access",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-share-button",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-share-button/index.html",
+      "type": "Access",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-skeleton-loader",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-skeleton-loader/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-wormhole",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-wormhole/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-date-range-picker",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-date-range-picker/index.html",
+      "type": "Display",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-card-share",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-card-share/index.html",
+      "type": "Access",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-map-widget-container",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-map-widget-container/index.html",
+      "type": "Visualization",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-telemetry-tabular",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-telemetry-report/tabular.html",
+      "type": "Telemetry",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-telemetry-metric",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-telemetry-report/metric.html",
+      "type": "Telemetry",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-table",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-table/index.html",
+      "type": "Visualization",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-file-upload-manager",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-file-upload-manager/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-download-list-card",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-download-list-card/index.html",
+      "type": "Downloads",
+      "status": "Production"
+    },
+    {
+      "title": "Configuration Editor",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-configuration-editor/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "Configuration Form",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-configuration-form/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-time-slider",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-time-slider/index.html",
+      "type": "Visualization",
+      "status": "Production"
+    },
+    {
+      "title": "New Content",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-new-content/index.html",
+      "type": "Editing",
+      "status": "Production"
+    },
+    {
+      "title": "Entity Metadata",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-entity-metadata/index.html",
+      "type": "Metadata",
+      "status": "Production"
+    },
+    {
+      "title": "arcgis-hub-versions",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-versions/index.html",
+      "type": "Layout",
+      "status": "Production"
+    },
+    {
+      "title": "Workspace",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-workspace/index.html",
+      "type": "Workspace",
+      "status": "Production"
+    },
+    {
+      "title": "Sub-Component: arcgis-hub-search-input",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-search-input/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Sub-Component: arcgis-hub-facet-list",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-facet-list/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Sub-Component: arcgis-hub-facet-options",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-facet-options/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Sub-Component: arcgis-load-more-button",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-load-more-button/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Catalog",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-catalog/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Catalog from API",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-catalog/hub-api-catalog.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Content",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: State",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/state.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Groups",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/groups.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Users",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/users.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Static List",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/list.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Well-Known Types",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/well-known-types.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Lazy Display",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/lazy-display.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Gallery: Collection Scope",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-gallery/collection-scope.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Groups Card: Simple",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-groups-card/index.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Groups Card: Auth",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-groups-card/authd-card.html",
+      "type": "Search",
+      "status": "Production"
+    },
+    {
+      "title": "Hub Project",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-project-view/index.html",
+      "type": "View",
+      "status": "Production"
+    },
+    {
+      "title": "Timeline",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-timeline/index.html",
+      "type": "Layouts",
+      "status": "Production"
+    },
+    {
+      "title": "Timeline Editor",
+      "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-timeline-editor/index.html",
+      "type": "Layouts",
+      "status": "Production"
+    }
+  ]
+}

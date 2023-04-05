@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'REPLACE_PROJECT_NAME',
+  namespace: 'component-gallery',
   sourceMap: true,
   plugins: [
     sass()

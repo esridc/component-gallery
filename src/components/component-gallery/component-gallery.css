@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    ". search"
+    "filters componentgrid";
+  grid-gap: 1rem;
+}
+
+component-gallery-search-input {
+  grid-area: search;
+}
+
+component-gallery-filter-sidebar {
+  grid-area: filters;
+}
+
+component-gallery-grid {
+  grid-area: componentgrid;
+}
