@@ -77,7 +77,7 @@ export function buildSearchInput(query = '', filters = {}): Object {
       }) as Array<any>; // TS missing this is building an array
 
     
-    if(query.length > 0) {
+    if(query?.length > 0) {
       and.push({ title: query })
     }
 
