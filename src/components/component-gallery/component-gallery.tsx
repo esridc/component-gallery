@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, h, Prop, State, Watch } from '@stencil/core';
 import axios from 'axios';
 import { createSearchIndex, search, addRecord, SearchFilters, getFilters } from '../../utils/search';
 
@@ -70,31 +70,22 @@ export class ComponentGallery {
       .length > 0;
   }
   handleSearch() {
-    if(this.query.length <= 0 && !this.checkFiltersExist(this.filters) ) {
+    if(this.query?.length <= 0 && !this.checkFiltersExist(this.filters) ) {
       this.filteredComponents = this.components;
     } else {
       this.filteredComponents = search( this.query, this.filters );
     }
   }
 
+  @Watch('query')
   handleQuery(query: string) {
     this.query = query;
-    console.debug('handleQuery', {
-      query: this.query,
-      filters: this.filters
-    })
-    // this.filteredComponents = search( this.searchQuery );
     this.handleSearch()
   }
 
-  // @Listen('filtersUpdated')
+  @Watch('filters')
   handleFilterUpdated( filters:SearchFilters = {} ) {
-
     this.filters = filters;
-    console.debug('handleFilterUpdated', {
-      query: this.query,
-      filters: this.filters
-    })    
     this.handleSearch();    
   }
 
