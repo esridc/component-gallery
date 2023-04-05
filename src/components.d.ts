@@ -8,6 +8,14 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { SearchFilters } from "./utils/search";
 export namespace Components {
     interface ComponentGallery {
+        /**
+          * Set the type & status filters on the gallery. Each filter type is `and` (both), while the array are `or` (any of) Example: filters={ type: ['Discussions', 'Telemetry], status: ['Production']}
+         */
+        "filters": Record<string, Array<string>>;
+        /**
+          * Set the query string to search the title
+         */
+        "query": string;
     }
     interface ComponentGalleryFilterSidebar {
         "filters": Record<string, Array<string>>;
@@ -16,6 +24,10 @@ export namespace Components {
         "components": any[];
     }
     interface ComponentGallerySearchInput {
+        /**
+          * Query string to show in input. Search function happens outside this component
+         */
+        "query": string;
     }
     interface ComponentGrid {
     }
@@ -69,6 +81,14 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ComponentGallery {
+        /**
+          * Set the type & status filters on the gallery. Each filter type is `and` (both), while the array are `or` (any of) Example: filters={ type: ['Discussions', 'Telemetry], status: ['Production']}
+         */
+        "filters"?: Record<string, Array<string>>;
+        /**
+          * Set the query string to search the title
+         */
+        "query"?: string;
     }
     interface ComponentGalleryFilterSidebar {
         "filters"?: Record<string, Array<string>>;
@@ -79,6 +99,10 @@ declare namespace LocalJSX {
     }
     interface ComponentGallerySearchInput {
         "onSearch"?: (event: ComponentGallerySearchInputCustomEvent<string>) => void;
+        /**
+          * Query string to show in input. Search function happens outside this component
+         */
+        "query"?: string;
     }
     interface ComponentGrid {
     }

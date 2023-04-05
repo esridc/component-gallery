@@ -453,13 +453,13 @@
     {
       "title": "Timeline",
       "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-timeline/index.html",
-      "type": "Layouts",
+      "type": "Layout",
       "status": "Production"
     },
     {
       "title": "Timeline Editor",
       "url": "https://esri.github.io/hub-components/harnesses/html/arcgis-hub-timeline-editor/index.html",
-      "type": "Layouts",
+      "type": "Layout",
       "status": "Production"
     }
   ]

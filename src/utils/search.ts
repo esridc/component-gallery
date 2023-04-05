@@ -15,7 +15,7 @@ export function createSearchIndex() {
     // findAllMatches: false,
     // minMatchCharLength: 1,
     // location: 0,
-    // threshold: 0.6,
+    threshold: 0.3,
     // distance: 100,
     useExtendedSearch: true,
     // ignoreLocation: false,
@@ -51,12 +51,47 @@ export function getFilters() {
   return filterOptions;
 }
 
-export function search( query ) {
-  // // Change the pattern
-  // const pattern = ""
+export function buildSearchInput(query = '', filters = {}): Object {
+    // Builds a query like:
+    // $and: [
+    //   { 
+    //     $or: [
+    //       { status: 'production' },
+    //       { status: 'developing' } 
+    //     ]
+    //   }, 
+    //   {
+    //     $or: [
+    //       { type: 'Discussions' }, 
+    //       { type: 'Search' } 
+    //     ]
+    //   }
+    // ]
+    const and = Object.keys(filters)
+      .filter((filterKey) => filters[filterKey].length > 0)
+      .map((filterKey) => {
+        const or = filters[filterKey].map((value) => {
+          return { [`${filterKey}`]: value }
+        })
+        return or.length > 0 ? { $or: or } : null
+      }) as Array<any>; // TS missing this is building an array
 
-  const results = getIndex().search( query );
-  console.log("search", {query, results})
+    
+    if(query.length > 0) {
+      and.push({ title: query })
+    }
+
+    console.debug('buildSearchInput', {
+      query: query,
+      filters: filters,
+      and: and
+    })
+    return {$and: and};
+}
+export function search( query, filters ) {
+  const searchInput = buildSearchInput(query, filters)
+
+  const results = getIndex().search( searchInput );
   return results.map((result) => result.item);
 
 }

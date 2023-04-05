@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.filter {
+  margin-top: 2rem;
+}
+
+.filterTitle {
+  font-weight: 500;
+}
+
 h3 {
   margin-top: 0;
 }

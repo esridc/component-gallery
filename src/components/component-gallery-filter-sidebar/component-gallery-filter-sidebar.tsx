@@ -26,7 +26,7 @@ export class ComponentGalleryFilterSidebar {
           .map((node:HTMLCalciteTreeItemElement) => node.innerText)
 
       })
-      
+
       this.filtersUpdated.emit( filters );
     }
   
@@ -36,14 +36,16 @@ export class ComponentGalleryFilterSidebar {
       return (
         <div class="sidebar">
           {Object.keys(this.filters).map((filter) => {
-            return [
-              <h3>Filter by {filter}:</h3>,
-              <calcite-tree ref={(el) => this.filtersEl[filter] = el} selection-mode="multiple">
-                {this.filters[filter].sort().map((option) => {
-                  return <calcite-tree-item>{option}</calcite-tree-item>
-                })}
-              </calcite-tree>
-            ]
+            return (
+              <div class="filter">
+                <span class="filterTitle">Filter by {filter}</span>
+                <calcite-tree ref={(el) => this.filtersEl[filter] = el} selection-mode="multiple">
+                  {this.filters[filter].sort().map((option) => {
+                    return <calcite-tree-item>{option}</calcite-tree-item>
+                  })}
+                </calcite-tree>
+              </div>
+            )
           })}
         </div>
       );

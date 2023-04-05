@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 import axios from 'axios';
 import { createSearchIndex, search, addRecord, SearchFilters, getFilters } from '../../utils/search';
 
@@ -8,78 +8,103 @@ import { createSearchIndex, search, addRecord, SearchFilters, getFilters } from 
   shadow: true,
 })
 export class ComponentGallery {
+  /** 
+   * Set the type & status filters on the gallery.
+   * Each filter type is `and` (both), while the array are `or` (any of)
+   * Example: filters={ type: ['Discussions', 'Telemetry], status: ['Production']}
+   */
+  @Prop({ mutable: true, reflect: true}) filters: Record<string, Array<string>> = {};
+  /**
+   * Set the query string to search the title
+   */
+  @Prop({ mutable: true, reflect: true}) query: string = '';
+
   @State() components: any[] = [];
   @State() filteredComponents: any[] = [];
-  @State() searchQuery: string = '';
   @State() filterOptions: Record<string, Array<string>> = {};
 
   searchIndex = createSearchIndex();
 
   async componentWillLoad() {
     try {
-      const response = await axios.get('./data/components.json');
-      this.components = response.data.components;
+      
+      this.components = await this.loadConfig();
       this.filteredComponents = this.components;
-      console.log("components", this.components)
-      this.components.forEach((component) => addRecord( component ));
       this.filterOptions = getFilters();
 
+      // Do a search in case query/filter props were set
+      // This will keep all components if no properties were set.
+      this.handleSearch();
+
     } catch (error) {
-      console.error('Error fetching apps:', error);
+      console.error('<component-gallery>: Error fetching configuration!', error);
     }
   }
 
-  handleSearch(query: string) {
-    if(query.length === 0) {
-      return this.filteredComponents = this.components;
+  /**
+   * Load the data/components.json configuration file
+   */
+  private async loadConfig() {
+    const response = await axios.get('./data/components.json');
+    const components = this.sortComponents(response.data.components);
+    components.forEach((component) => addRecord( component ));
+    return components;
+  }
+  /**
+   * Sort components by lowercase title
+   * @param components array of components to srt
+   */
+  private sortComponents(components: Array<any>) {
+    return components.sort((a, b) => {
+      return a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1;
+    });
+  }
+
+  /**
+   * Small function to check if filters are empty or not
+   * @param filters 
+   */
+  private checkFiltersExist(filters) {
+    return Object.keys(filters)
+      .filter((filterKey) => filters[filterKey].length > 0)
+      .length > 0;
+  }
+  handleSearch() {
+    if(this.query.length <= 0 && !this.checkFiltersExist(this.filters) ) {
+      this.filteredComponents = this.components;
+    } else {
+      this.filteredComponents = search( this.query, this.filters );
     }
-    this.searchQuery = query;
-    this.filteredComponents = search( this.searchQuery );
+  }
+
+  handleQuery(query: string) {
+    this.query = query;
+    console.debug('handleQuery', {
+      query: this.query,
+      filters: this.filters
+    })
+    // this.filteredComponents = search( this.searchQuery );
+    this.handleSearch()
   }
 
   // @Listen('filtersUpdated')
-  handleFilterUpdated( filters:SearchFilters ) {
-    console.log('handleFilterByTypes', filters)
+  handleFilterUpdated( filters:SearchFilters = {} ) {
 
-    // Builds a query like:
-    // $and: [
-    //   { 
-    //     $or: [
-    //       { status: 'production' },
-    //       { status: 'developing' } 
-    //     ]
-    //   }, 
-    //   {
-    //     $or: [
-    //       { type: 'Discussions' }, 
-    //       { type: 'Search' } 
-    //     ]
-    //   }
-    // ]    
-    const and = Object.keys(filters)
-      .filter((filterKey) => filters[filterKey].length >0)
-      .map((filterKey) => {
-        console.log("filters", [filterKey, filters[filterKey]])
-        const or = filters[filterKey].map((value) => {
-          return { [`${filterKey}`]: value }
-        })
-        return or.length > 0 ? { $or: or } : null
-      })
-    
-    if(and.length > 0 ) {
-      this.filteredComponents = search( { $and: and } );
-    } else {
-      this.filteredComponents = this.components;
-    }
-    
-    // this.appTypeFilter = type;
-    // this.filteredComponents = filterApps(this.apps, this.searchIndex, this.searchQuery, this.appTypeFilter, this.appStatusFilter);
+    this.filters = filters;
+    console.debug('handleFilterUpdated', {
+      query: this.query,
+      filters: this.filters
+    })    
+    this.handleSearch();    
   }
 
   render() {
     return (
       <div class="gallery-container">
-        <component-gallery-search-input onSearch={(event) => this.handleSearch(event.detail)}></component-gallery-search-input>
+        <component-gallery-search-input
+          query={this.query}
+          onSearch={(event) => this.handleQuery(event.detail)}
+        ></component-gallery-search-input>
         <component-gallery-filter-sidebar
           filters={this.filterOptions}
           onFiltersUpdated={(event) => this.handleFilterUpdated(event.detail)}
