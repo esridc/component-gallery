@@ -89,7 +89,7 @@ export function buildSearchInput(query = '', filters = {}): Object {
     return {$and: and};
 }
 export function search( query, filters ) {
-  const searchInput = buildSearchInput(query, filters)
+  const searchInput = buildSearchInput(query, filters);
 
   const results = getIndex().search( searchInput );
   return results.map((result) => result.item);

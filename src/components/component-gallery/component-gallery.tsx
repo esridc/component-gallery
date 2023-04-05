@@ -61,7 +61,7 @@ export class ComponentGallery {
   }
 
   /**
-   * Small function to check if filters are empty or not
+   * Check if filters are empty or not
    * @param filters 
    */
   private checkFiltersExist(filters) {
@@ -69,8 +69,20 @@ export class ComponentGallery {
       .filter((filterKey) => filters[filterKey].length > 0)
       .length > 0;
   }
+  /**
+   * Check if the query is empty
+   * @param query 
+   * @returns 
+   */
+  private checkQueryExists(query) {
+    return (!!query || query?.length >= 0);
+  }
+
+  /**
+   * Method interface for the search index
+   */
   handleSearch() {
-    if(this.query?.length <= 0 && !this.checkFiltersExist(this.filters) ) {
+    if(!this.checkQueryExists(this.query) && !this.checkFiltersExist(this.filters) ) {
       this.filteredComponents = this.components;
     } else {
       this.filteredComponents = search( this.query, this.filters );
